@@ -16,17 +16,10 @@ export default function Footer() {
             <span>{site.phoneDisplay}</span>
           </a>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-smoke">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <a href={site.socials.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors" aria-label="WhatsApp">
-              WhatsApp
-            </a>
-            <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors" aria-label="Instagram">
-              Instagram
-            </a>
-          </div>
-        </div>
+       
+         
+          
+        
       </div>
     </footer>
   )

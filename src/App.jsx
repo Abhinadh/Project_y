@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Services from './components/Services'
+import {services} from './components/Services'
 import Groom from './components/Groom'
 import Kids from './components/Kids'
 import WhyUs from './components/WhyUs'
@@ -34,7 +34,7 @@ function App() {
       <Header />
       <main>
         <div data-reveal><Hero /></div>
-        <div data-reveal><Services /></div>
+        <div data-reveal><services /></div>
         <div data-reveal><Groom /></div>
         <div data-reveal><Kids /></div>
         <div data-reveal><WhyUs /></div>

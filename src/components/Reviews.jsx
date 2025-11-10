@@ -8,8 +8,10 @@ export default function Reviews() {
   const ReviewCard = ({ review, index }) => (
     <div className="flex-shrink-0 px-3 md:px-4 w-[280px] sm:w-[320px] md:w-[350px] lg:w-[380px]">
       <div className="relative group h-full">
-        {/* Enhanced Card with gradient and shadow */}
-        <div className="card-light p-6 md:p-7 h-full rounded-xl bg-gradient-to-br from-white to-porcelain border-2 border-gold/20 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-gold/40">
+
+        {/* Card */}
+        <div className="card-light p-6 md:p-7 h-full rounded-xl bg-white border-2 border-gold/20 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-gold/40">
+
           {/* Quote Icon */}
           <div className="absolute top-4 right-4 opacity-10">
             <svg className="w-12 h-12 text-gold" fill="currentColor" viewBox="0 0 24 24">
@@ -17,7 +19,7 @@ export default function Reviews() {
             </svg>
           </div>
           
-          {/* Rating Stars */}
+          {/* Rating + user */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-white font-bold shadow-md">
@@ -26,19 +28,21 @@ export default function Reviews() {
               <div>
                 <h3 className="font-bold text-lg text-base-950">{review.name}</h3>
                 <div className="flex items-center gap-1 mt-0.5">
-                  <span aria-label={`${review.rating} stars`} className="text-gold text-lg">{'★'.repeat(review.rating)}</span>
+                  <span aria-label={`${review.rating} stars`} className="text-gold text-lg">
+                    {'★'.repeat(review.rating)}
+                  </span>
                   <span className="text-xs text-black/40 ml-1">({review.rating}/5)</span>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Review Text */}
-          <p className="text-sm md:text-base text-black/70 mt-4 leading-relaxed relative z-10 italic">
+          <p className="text-sm md:text-base text-black/70 mt-4 leading-relaxed italic">
             "{review.text}"
           </p>
-          
-          {/* Decorative bottom accent */}
+
+          {/* Verified */}
           <div className="mt-6 pt-4 border-t border-gold/20">
             <div className="flex items-center gap-2 text-xs text-black/40">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,6 +51,7 @@ export default function Reviews() {
               <span>Verified Customer</span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -59,14 +64,11 @@ export default function Reviews() {
           <p className="section-subtitle text-onyx">Client Love</p>
           <h2 className="section-title">Reviews</h2>
         </header>
-        
-        {/* Scrolling Ticker Container */}
+
+        {/* Scrolling Container */}
         <div className="relative overflow-hidden">
-          {/* Gradient overlays for smooth fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-porcelain to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-porcelain to-transparent z-10 pointer-events-none" />
-          
-          {/* Scrolling Ticker */}
+
+          {/* Scrolling row */}
           <div className="overflow-hidden py-4">
             <div className="flex scroll-ticker">
               {duplicatedReviews.map((r, index) => (
@@ -74,10 +76,9 @@ export default function Reviews() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>
   )
 }
-
-

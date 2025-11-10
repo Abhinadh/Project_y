@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="relative container-xl text-center space-y-5 sm:space-y-6 py-16 sm:py-0">
         <p className="uppercase tracking-[.3em] text-[10px] sm:text-xs text-gold">{site.subtitle}</p>
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">BEING HANDSOME</h1>
-        <p className="text-sm sm:text-base text-smoke px-2 sm:px-0">{site.tagline}</p>
+        <p className="uppercase tracking-[.3em] text-[10px] sm:text-xs text-gold">{site.tagline}</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
           <a href="#contact" className="btn-primary">Book Now</a>
           <a href="#services" className="btn-outline">Our Services</a>

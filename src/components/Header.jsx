@@ -17,11 +17,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-base-950/60 border-b border-white/5">
       <nav className="container-xl flex items-center justify-between h-14">
-        <a href="#hero" className="font-extrabold tracking-widest text-gold">{site.name.toUpperCase()}</a>
-        <ul className="hidden md:flex gap-6 text-sm">
+        <a href="/" className=" momo-signature-regular tracking-widest text-gold">{site.name.toUpperCase()}</a>
+        <ul className="hidden md:flex gap-6 text-sm ">
           {links.map((l) => (
             <li key={l.href}>
-              <a className="text-smoke hover:text-white transition-colors" href={l.href}>{l.label}</a>
+              <a className="text-smoke hover:text-white transition-colors " href={l.href}>{l.label}</a>
             </li>
           ))}
         </ul>
@@ -31,8 +31,10 @@ export default function Header() {
             <span>{site.phoneDisplay}</span>
           </a>
           <a href="#contact" className="btn-primary hidden sm:inline-flex">Book Now</a>
-          <button aria-label="Open menu" className="md:hidden inline-flex items-center justify-center rounded-md border border-white/10 p-2 text-white" onClick={() => setOpen(true)}>
-            <span className="i">≡</span>
+          <button aria-label="Open menu" className="md:hidden rounded-md border border-gray-300 p-2 dark:border-gray-700" onClick={() => setOpen(true)}>
+            <span className="block h-0.5 w-5 bg-current mb-1"></span>
+            <span className="block h-0.5 w-5 bg-current mb-1"></span>
+            <span className="block h-0.5 w-5 bg-current"></span>
           </button>
         </div>
       </nav>
@@ -43,18 +45,19 @@ export default function Header() {
               <span className="font-bold tracking-widest text-gold">{site.name.toUpperCase()}</span>
               <button aria-label="Close menu" className="rounded-md border border-white/10 px-2 py-1" onClick={() => setOpen(false)}>✕</button>
             </div>
-            <ul className="mt-6 space-y-4">
+          <ul className="mt- space-y-4 backdrop-blur-2xl bg-black/60  sm:text-lg md:text-xl 
+     rounded-xl items-center text-center p-4">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a className="block text-sm text-white/90" href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+                  <a className="block text-[16px] sm:text-lg md:text-xl text-white/90" href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
                 </li>
               ))}
             </ul>
-            <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="mt-4 flex items-center gap-2 text-sm text-gold font-semibold" onClick={() => setOpen(false)}>
+            {/* <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="mt-4 flex items-center gap-2 text-sm text-gold font-semibold" onClick={() => setOpen(false)}>
               <span>📞</span>
               <span>{site.phoneDisplay}</span>
             </a>
-            <a href="#contact" className="btn-primary mt-6 inline-flex w-full" onClick={() => setOpen(false)}>Book Now</a>
+            <a href="#contact" className="btn-primary mt-6 inline-flex w-full" onClick={() => setOpen(false)}>Book Now</a> */}
           </div>
         </div>
       )}
