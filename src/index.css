@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Momo Signature";
+  src: url("/fonts/MomoSignature-Regular.woff2") format("woff2"),
+       url("/fonts/MomoSignature-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -115,13 +125,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-@font-face {
+/* @font-face {
   font-family: "Momo Signature";
-  src: url("/fonts/MomoSignature.ttf") format("truetype");
+  src: url("/fonts/MomoSignature-Regular.woff2") format("woff2"),
+      url("/fonts/MomoSignature-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 
-}
+} */
 .momo-signature-regular {
   font-family: "Momo Signature", cursive;
 }
