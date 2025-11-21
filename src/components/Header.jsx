@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-base-950/60 border-b border-white/5">
       <nav className="container-xl flex items-center justify-between h-14">
-        <a href="/" className="momo-signature-regular tracking-widest text-gold">{site.name.toUpperCase()}</a>
+        <a href="/" className=" momo-signature-regular tracking-widest text-gold">{site.name.toUpperCase()}</a>
         <ul className="hidden md:flex gap-6 text-sm ">
           {links.map((l) => (
             <li key={l.href}>
