@@ -39,7 +39,7 @@ export default function Header() {
         </div>
       </nav>
       {open && (
-        <div className="md:hidden fixed inset-0 z-50 bg-black/80" onClick={() => setOpen(false)}>
+        <div className="md:hidden fixed inset-0 z-50 bg-black/85" onClick={() => setOpen(false)}>
           <div className="absolute right-0 top-0 h-full w-64 bg-base-900/95 border-l border-white/10 p-6" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <span className="font-bold tracking-widest text-gold">{site.name.toUpperCase()}</span>
@@ -53,11 +53,7 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            {/* <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="mt-4 flex items-center gap-2 text-sm text-gold font-semibold" onClick={() => setOpen(false)}>
-              <span>📞</span>
-              <span>{site.phoneDisplay}</span>
-            </a>
-            <a href="#contact" className="btn-primary mt-6 inline-flex w-full" onClick={() => setOpen(false)}>Book Now</a> */}
+        
           </div>
         </div>
       )}
