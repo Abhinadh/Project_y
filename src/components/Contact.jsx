@@ -1,5 +1,6 @@
 import { site } from '../data/site'
-import { FaWhatsapp, FaInstagram, FaPhoneAlt } from "react-icons/fa"
+import { Phone, Instagram, MessageCircle } from "lucide-react"
+
 
 export default function Contact() {
   const formAction = () => {
@@ -47,7 +48,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <FaWhatsapp className="text-xl text-green-500" />
+                <MessageCircle className="text-xl text-green-500" />
                 <span>WhatsApp</span>
               </a>
 
@@ -58,7 +59,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <FaInstagram className="text-xl text-pink-500" />
+                <Instagram className="text-xl text-pink-500" />
                 <span>Instagram</span>
               </a>
 
@@ -67,7 +68,7 @@ export default function Contact() {
                 href={`tel:${site.phone.replace(/\s/g, '')}`}
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <FaPhoneAlt className="text-xl text-blue-500" />
+                <Phone className="text-xl text-blue-500" />
                 <span>Call</span>
               </a>
 
