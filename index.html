@@ -2,43 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
 
+    <!-- Favicon / Logo -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Primary SEO -->
     <title>Being Handsome | Premium Gents Salon in Kerala</title>
-    <meta name="description" content="Being Handsome — premium, dark-themed gents salon in Kerala. Expert stylists, masculine grooming, luxury experience. Book hair, face, and body care." />
+    <meta name="description" content="Being Handsome — premium, dark-themed gents salon in Kerala. Expert stylists, masculine grooming, luxury grooming experience for modern men." />
+    <link rel="canonical" href="https://beginhandsome.in/" />
+
+    <!-- Theme color -->
     <meta name="theme-color" content="#0B0B0C" />
-    <meta property="og:title" content="Being Handsome — Premium Gents Salon" />
-    <meta property="og:description" content="Masculine grooming. Expert stylists. Luxury experience." />
+
+    <!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:title" content="Being Handsome — Premium Gents Salon in Kerala" />
+    <meta property="og:description" content="Expert haircuts, beard styling, facial grooming and luxury care for men." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://being-handsome.example" />
-    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:url" content="https://beginhandsome.in/" />
+    <meta property="og:image" content="https://beginhandsome.in/og.jpg" />
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Being Handsome — Gents Salon" />
+    <meta name="twitter:description" content="Premium grooming and expert stylists in Kerala." />
+    <meta name="twitter:image" content="https://beginhandsome.in/og.jpg" />
+
+    <!-- Preload hero video for faster loading -->
     <link rel="preload" as="video" href="/media/hero.mp4" />
+
+    <!-- Salon SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Being Handsome",
+      "url": "https://beginhandsome.in/",
+      "image": "https://beginhandsome.in/og.jpg",
+      "telephone": "+91 8086133111",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Teresa Arcade, Perumbillisery, Cherpu",
+        "addressLocality": "Thrissur",
+        "addressRegion": "Kerala",
+        "postalCode": "680561",
+        "addressCountry": "IN"
+      }
+
+      "openingHours": "Mo-Sa 09:00-21:00",
+      "priceRange": "₹₹"
+    }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Being Handsome",
-        "url": "https://being-handsome.example",
-        "image": "/og.jpg",
-        "telephone": "+91-00000-00000",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "123 Luxury Street",
-          "addressLocality": "Kochi",
-          "addressRegion": "Kerala",
-          "postalCode": "682001",
-          "addressCountry": "IN"
-        },
-        "openingHours": ["Mo-Sa 09:00-21:00"],
-        "priceRange": "₹₹"
-      }
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

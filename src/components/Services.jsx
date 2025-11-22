@@ -11,6 +11,7 @@ export const services = [
       <img
         src="/media/face_care.webp"
         alt="Hair Care"
+        loading="lazy" 
         className="w-16 h-16 object-cover rounded-full border-4 border-white shadow-2xl"
       />
     ),
