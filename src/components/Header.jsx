@@ -31,10 +31,11 @@ export default function Header() {
             <span>{site.phoneDisplay}</span>
           </a>
           <a href="#contact" className="btn-primary hidden sm:inline-flex">Book Now</a>
-          <button aria-label="Open menu" className="md:hidden rounded-md border border-gray-300 p-2 dark:border-gray-700" onClick={() => setOpen(true)}>
-            <span className="block h-0.5 w-5 bg-current mb-1"></span>
-            <span className="block h-0.5 w-5 bg-current mb-1"></span>
-            <span className="block h-0.5 w-5 bg-current"></span>
+          <button aria-label="Open menu" className="md:hidden rounded-md border border-white/20 p-2 bg-black/30 text-white"
+ onClick={() => setOpen(true)}>
+            <span className="block h-0.5 w-5 bg-white mb-1"></span>
+            <span className="block h-0.5 w-5 bg-white mb-1"></span>
+            <span className="block h-0.5 w-5 bg-white mb-1"></span>
           </button>
         </div>
       </nav>
