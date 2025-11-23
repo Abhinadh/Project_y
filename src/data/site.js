@@ -5,11 +5,11 @@ export const site = {
   hours: 'Mon–Sat • 9AM–9PM',
   phone: '+91 8086133111',
   phoneDisplay: '8086133111',
-  address: '123 Luxury Street, Kochi',
+address: 'Teresa Arcade, Perumbillisery, Cherpu, Thrissur, Kerala 680561',
   formspreeId: 'xbldzjyz', // change to your own Formspree ID
   socials: {
     whatsapp: 'https://wa.me/918086133111',
-    instagram: 'https://www.instagram.com/beinghandsome',
+    instagram: 'https://www.instagram.com/being_handsome_tcr?igsh=MTl5OHEzZG1hM3FrMw==',
   },
 }
 
