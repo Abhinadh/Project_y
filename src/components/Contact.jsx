@@ -1,11 +1,13 @@
-import { site } from '../data/site'
-import { Phone, Instagram, MessageCircle } from "lucide-react"
-
+import { useState } from "react";
+import { site } from '../data/site';
+import { Phone, Instagram, MessageCircle } from "lucide-react";
 
 export default function Contact() {
+  const [iframeLoaded, setIframeLoaded] = useState(true); // default true → fallback only if fail
+
   const formAction = () => {
-    alert("Contact us through WhatsApp or phone.")
-  }
+    alert("Contact us through WhatsApp or phone.");
+  };
 
   return (
     <section id="contact" className="py-16">
@@ -40,7 +42,6 @@ export default function Contact() {
 
             {/* SOCIAL BUTTONS */}
             <div className="mt-4 flex flex-wrap gap-3">
-
               <a
                 aria-label="WhatsApp"
                 href={site.socials.whatsapp}
@@ -48,7 +49,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <MessageCircle className="text-xl text-green-500" />
+                <MessageCircle className="w-5 h-5 text-green-500" />
                 <span>WhatsApp</span>
               </a>
 
@@ -59,7 +60,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <Instagram className="text-xl text-pink-500" />
+                <Instagram className="w-5 h-5 text-pink-500" />
                 <span>Instagram</span>
               </a>
 
@@ -68,24 +69,47 @@ export default function Contact() {
                 href={`tel:${site.phone.replace(/\s/g, '')}`}
                 className="btn-outline px-3 py-2 flex items-center gap-2"
               >
-                <Phone className="text-xl text-blue-500" />
+                <Phone className="w-5 h-5 text-blue-500" />
                 <span>Call</span>
               </a>
-
             </div>
           </div>
 
           {/* MAP SECTION */}
-   <iframe
-  title="Salon Location Map"
-  className="w-full h-64 sm:h-80 lg:h-full rounded-xl border border-white/10"
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  allowFullScreen=""
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8653343230833!2d76.21436757451761!3d10.508387089613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f10f273d7775%3A0x57d8e20ae2b4928c!2sBeing%20Handsome%20Gents%20Beauty%20Parlour%2C%20Teresa%20Arcade%2C%20Perumbillisery%2C%20Cherpu%2C%20Thrissur%2C%20Kerala%20680561!5e0!3m2!1sen!2sin!4v1709270034567!5m2!1sen!2sin"
-/>
+          <div>
+            <iframe
+              title="Salon Location Map"
+              className="w-full h-64 sm:h-80 lg:h-full rounded-xl border border-white/10"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8653343230833!2d76.21436757451761!3d10.508387089613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f10f273d7775%3A0x57d8e20ae2b4928c!2sBeing%20Handsome%20Gents%20Beauty%20Parlour%2C%20Teresa%20Arcade%2C%20Perumbillisery%2C%20Cherpu%2C%20Thrissur%2C%20Kerala%20680561!5e0!3m2!1sen!2sin!4v1709270034567!5m2!1sen!2sin"
+              onLoad={() => setIframeLoaded(true)}
+              onError={() => setIframeLoaded(false)}
+            />
 
+            {/* FALLBACK - only shows if iframe fails */}
+            {!iframeLoaded && (
+              <div className="mt-3">
+                {/* Static Map Image */}
+                <img
+                  src="https://maps.googleapis.com/maps/api/staticmap?center=10.508387,76.214367&zoom=16&size=600x400&markers=color:red|10.508387,76.214367&key=YOUR_API_KEY"
+                  alt="Salon Location Map"
+                  className="w-full h-64 sm:h-80 lg:h-full rounded-xl border border-white/10 object-cover"
+                />
 
+                {/* Directions Button */}
+                <a
+                  href="https://www.google.com/maps/place/Being+Handsome+Gents+Beauty+Parlour/@10.5083871,76.2143676,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold underline block text-center mt-2"
+                >
+                  Open in Google Maps →
+                </a>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* CONTACT FORM */}
@@ -131,5 +155,5 @@ export default function Contact() {
 
       </div>
     </section>
-  )
+  );
 }
