@@ -76,13 +76,15 @@ export default function Contact() {
           </div>
 
           {/* MAP SECTION */}
-       <iframe
+   <iframe
   title="Salon Location Map"
   className="w-full h-64 sm:h-80 lg:h-full rounded-xl border border-white/10"
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"
+  allowFullScreen=""
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8653343230833!2d76.21436757451761!3d10.508387089613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f10f273d7775%3A0x57d8e20ae2b4928c!2sBeing%20Handsome%20Gents%20Beauty%20Parlour%2C%20Teresa%20Arcade%2C%20Perumbillisery%2C%20Cherpu%2C%20Thrissur%2C%20Kerala%20680561!5e0!3m2!1sen!2sin!4v1709270034567!5m2!1sen!2sin"
 />
+
 
         </div>
 
